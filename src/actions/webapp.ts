@@ -3,9 +3,8 @@ import {Composer} from "telegraf";
 
 const composer = new Composer()
 
-const webAppUrl = '/'
+const webAppUrl = 'https://google.com'
 composer.hears("👕 Kiyimlarni ko'rish",async(ctx) => {
-    console.log("birnarsa")
     const chatId = ctx.chat.id;
     await bot.telegram.sendMessage(chatId,'Pastdagi buttonga bosgan holda u yerga kirishingiz mumkin',{
         reply_markup:{
@@ -15,3 +14,5 @@ composer.hears("👕 Kiyimlarni ko'rish",async(ctx) => {
         }
     })
 })
+
+bot.use(composer.middleware())

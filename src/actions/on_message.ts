@@ -21,8 +21,7 @@ composer.on('message', async (ctx) => {
             user_id: `${ctx.from.id}`
         }
     })
-
-
+    
 })
 
 bot.use(composer.middleware())
